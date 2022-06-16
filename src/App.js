@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import { GetRandomFunction } from './gifs/RandomGif';
 import logo from './write-carpe-diem-16-06-2022__1_.gif';
 
 function App() {
   const [inputValue, setInputValue] = useState('')
+  const [showUseless, setShowUseless] = useState(false)
 
 
   let decoded = {
@@ -33,14 +35,29 @@ function App() {
     else if (' ') setInputValue(inputValue + ' ')
   }
 
+
+
   return (
     <div className="App" >
       <div className="Outer">
+
         <div className="Inner">
+          {/* <ReactAudioPlayer
+            src="public/music.mp3"
+            autoPlay
+
+          /> */}
+          <img src={GetRandomFunction()} alt="" />
+
           <img src={logo} alt="" />
-          <input onChange={({ target }) => console.log(target) && onChangeInput(target.value.slice(-1))} value={inputValue}></input>
-          <button onClick={() => setInputValue('')}>CLEAR</button>
-          <button>ENGAGE</button>
+          {showUseless && <iframe src="https://giphy.com/embed/xT9IgFBdbnrx74PYPK" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>}
+          <div className="Input_div">
+            <input onChange={({ target }) => onChangeInput(target.value.slice(-1))} value={inputValue}></input>
+            <button onClick={() => setInputValue('')}>CLEAR</button>
+            <button>ENGAGE</button>
+            <button>ENGAGE</button>
+
+          </div>
         </div>
       </div>
 
