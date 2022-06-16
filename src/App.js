@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { GetRandomFunction } from './gifs/RandomGif';
-import logo from './write-carpe-diem-16-06-2022__1_.gif';
+import logo from './carpe-diem.gif';
 
 function App() {
   const [inputValue, setInputValue] = useState('')
