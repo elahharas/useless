@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,10 +9,21 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.Outer {
+  background-color: black;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Inner {
+  background-color: white;
+  display: flex;
+  padding: 16rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -32,6 +39,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
